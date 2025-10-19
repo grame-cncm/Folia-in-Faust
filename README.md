@@ -10,7 +10,7 @@ This work has been documented with a paper for "Journées de l'Informatique Musi
 * [Paper](https://hal.science/hal-05102319)
 * [Talk](https://www.youtube.com/live/3HebU_49CPI?si=RfIESoYIkJpL8xpH&t=6136)
 
-With this Faust version, it is possible to perform this piece with almost any musical software/environment : 
+With this Faust version, it is possible to perform this piece with almost any musical software/environment: 
 * Reaper (or any DAW)
 * Csound
 * PD/Max
@@ -21,11 +21,11 @@ With this Faust version, it is possible to perform this piece with almost any mu
 
 The signal processing FAUST files are placed in `dsp` folder. 
 
-The core of the piece is based on three DSP files : 
-* delay.dsp
-* harm.dsp
-* verb_inf_fdn.dsp 
-* gmem_spat_auto[_stereo].dsp 
+The core of the piece is based on three DSP files: 
+* [delay.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/delay.dsp)
+* [harm.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/harm.dsp)
+* [verb_inf_fdn.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/verb_inf_fdn.dsp) 
+* [gmem_spat_auto.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/gmem_spat_auto.dsp) and [gmem_spat_auto_stereo.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/gmem_spat_auto_stereo.dsp)
 
 These are the core signal processing components of the program. 
 The file `patch.png` describes routing information.
@@ -38,7 +38,7 @@ For reverberation algorithm itself, some other (better ?) strategies could have 
 - Making an IR of the original reverberation (SPAT reverb), convolve it, and using a feedback mechanism to change reverb duration
 - Trying to reproduce SPAT's perceptive parameters (envelopment, reverberance...) with the FDN reverb.    
 
-In order to reproduce the original patch with more fidelity, it has been decided to stick to its sound design philosophy : adding a simple reverb bus as well as simple circular spatialization tools : 
+In order to reproduce the original patch with more fidelity, it has been decided to stick to its sound design philosophy: adding a simple reverb bus as well as simple circular spatialization tools: 
 * Reaverb (or any convolution reverb program) and an IR for a large hall : this reverberation is not to be considered as an actual effect, but more like a solution to gather acoustic and electronic sound.  
 * `gmem_spat_auto.dsp` and `gmem_spat_auto_stereo.dsp` enables automatic spatialization. While it is not the same spatialization as the original program (using IRCAM's spat), it uses the exact same algorithm for sources movement description. 
 
@@ -57,7 +57,7 @@ If you target Csound, also there are at least 2 options :
 ## Re-create the execution environment
 
 The second step to reproduce the program is to implement routing described in `patch/patch.png`. This raw patch description is made with [Patchbook](https://github.com/SpektroAudio/Patchbook). Implementation will be different depending on the environment you decide to use for performance. 
-The environment must be allow you to : 
+The environment must be allow you to  
 * Execute DSP code
 * Route signals from components to components
 * Use MIDI or OSC inputs to control the main effects levels 
