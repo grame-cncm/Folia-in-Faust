@@ -66,5 +66,5 @@ The `folia_reaper` session can give an example on how routing is actually made. 
 
 ## Experimental Web
 
-Some unfinished work in the `web` folder corresponds to an attempt to create a light web version. 
+Some unfinished work in the `web` folder corresponds to an attempt to create a [light web version](web/index.html). 
 
