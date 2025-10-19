@@ -21,14 +21,14 @@ With this Faust version, it is possible to perform this piece with almost any mu
 
 The signal processing FAUST files are placed in `dsp` folder. 
 
-The core of the piece is based on three DSP files: 
-* [delay.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/delay.dsp)
-* [harm.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/harm.dsp)
-* [verb_inf_fdn.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/verb_inf_fdn.dsp) 
-* [gmem_spat_auto.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/gmem_spat_auto.dsp) and [gmem_spat_auto_stereo.dsp](https://github.com/grame-cncm/Folia-in-Faust/blob/main/dsp/gmem_spat_auto_stereo.dsp)
+The core of the piece is based on four DSP files: 
+* [delay.dsp](dsp/delay.dsp)
+* [harm.dsp](dsp/harm.dsp)
+* [verb_inf_fdn.dsp](dsp/verb_inf_fdn.dsp) 
+* [gmem_spat_auto.dsp](dsp/gmem_spat_auto.dsp) or [gmem_spat_auto_stereo.dsp](dsp/gmem_spat_auto_stereo.dsp)
 
 These are the core signal processing components of the program. 
-The file `patch.png` describes routing information.
+The file [patch.png](patch/patch.png) describes routing information.
 
 ## Design decisions
 
